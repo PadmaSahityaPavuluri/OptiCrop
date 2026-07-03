@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Your Crop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="topnav">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a class="active" href="/findyourcrop">Find Your Crop</a>
+</div>
+
+<div class="container">
+
+    <h2>Crop Recommendation</h2>
+
+    <form action="/predict" method="POST">
+
+        <label>Nitrogen</label><br>
+        <input type="number" name="N" required><br><br>
+
+        <label>Phosphorous</label><br>
+        <input type="number" name="P" required><br><br>
+
+        <label>Potassium</label><br>
+        <input type="number" name="K" required><br><br>
+
+        <label>Temperature (°C)</label><br>
+        <input type="number" step="any" name="temperature" required><br><br>
+
+        <label>Humidity (%)</label><br>
+        <input type="number" step="any" name="humidity" required><br><br>
+
+        <label>pH</label><br>
+        <input type="number" step="any" name="ph" required><br><br>
+
+        <label>Rainfall (mm)</label><br>
+        <input type="number" step="any" name="rainfall" required><br><br>
+
+        <button type="submit">Predict Crop</button>
+
+    </form>
+
+    <br>
+
+    {% if prediction_text %}
+    <div style="margin-top:20px; padding:15px; background:#e8f5e9; border-radius:10px;">
+        <h2>Prediction Result</h2>
+        <h3 style="color:green;">
+            {{ prediction_text }}
+        </h3>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#edf8ee;
+}
+
+.topnav{
+    overflow:hidden;
+    background:#2e7d32;
+}
+
+.topnav a{
+    float:left;
+    color:white;
+    padding:15px 20px;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.topnav a:hover{
+    background:#1b5e20;
+}
+
+.active{
+    background:#43a047;
+}
+
+.container{
+    width:70%;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+}
+
+button{
+    background:green;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#1b5e20;
+}
